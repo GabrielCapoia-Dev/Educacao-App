@@ -1,0 +1,19 @@
+<div class="app-layout">
+  <aside class="sidebar">
+    <a class="brand" routerLink="/" aria-label="Gestão Edu, início"><span class="brand-mark">GE</span><span class="brand-name">gestão<span>edu</span><small>SECRETARIA DE EDUCAÇÃO</small></span></a>
+    <div class="nav-label">MENU PRINCIPAL</div>
+    <nav class="main-nav" aria-label="Menu principal">
+      <a routerLink="/" routerLinkActive="active" [routerLinkActiveOptions]="{ exact: true }"><span class="nav-icon">⌂</span>Visão geral</a>
+      <a routerLink="/pessoas" routerLinkActive="active"><span class="nav-icon">♙</span>Pessoas</a>
+      <a routerLink="/escolas" routerLinkActive="active"><span class="nav-icon">▦</span>Escolas e CMEIs</a>
+      <a routerLink="/turmas" routerLinkActive="active"><span class="nav-icon">▤</span>Turmas e alunos</a>
+      <a routerLink="/avaliacoes" routerLinkActive="active"><span class="nav-icon">✓</span>Avaliações</a>
+    </nav>
+    <div class="sidebar-bottom"><span class="environment-dot"></span><span>Ambiente de desenvolvimento</span></div>
+  </aside>
+
+  <main class="main-area">
+    <header class="topbar"><div class="breadcrumb">Gestão Edu <span>/</span> <strong>Backend em evolução</strong></div><div class="profile"><span class="profile-avatar">GC</span><span><strong>Gabriel</strong><small>Desenvolvimento</small></span><span class="chevron">⌄</span></div></header>
+    <div class="page-content"><router-outlet /></div>
+  </main>
+</div>

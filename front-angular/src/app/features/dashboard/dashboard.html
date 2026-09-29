@@ -1,0 +1,34 @@
+<section class="page-heading">
+  <div>
+    <p class="eyebrow">VISÃO GERAL</p>
+    <h1>Bem-vindo ao Gestão Edu</h1>
+    <p class="subtitle">Uma nova base para os serviços da Secretaria Municipal de Educação.</p>
+  </div>
+  <div class="date-chip"><span aria-hidden="true">◷</span> Ambiente de desenvolvimento</div>
+</section>
+
+<section class="welcome-card">
+  <div class="welcome-copy">
+    <span class="welcome-label">NOVA PLATAFORMA · EM CONSTRUÇÃO</span>
+    <h2>Uma etapa de cada vez.</h2>
+    <p>Esta interface é o ponto de partida para separar gradualmente o frontend do backend do Gestão Edu.</p>
+  </div>
+  <div class="welcome-art" aria-hidden="true"><span>GE</span><i></i><b></b></div>
+</section>
+
+<section class="section-heading">
+  <div><p class="eyebrow">SISTEMA</p><h2>Áreas do Gestão Edu</h2></div>
+  <span class="section-note">Módulos serão adicionados gradualmente</span>
+</section>
+
+<section class="module-grid" aria-label="Áreas do sistema">
+  <a class="module-card" routerLink="/pessoas"><span class="module-icon lavender">P</span><span><strong>Pessoas</strong><small>Usuários, professores e servidores</small></span><span class="arrow">↗</span></a>
+  <a class="module-card" routerLink="/escolas"><span class="module-icon mint">E</span><span><strong>Escolas e CMEIs</strong><small>Unidades e vínculos</small></span><span class="arrow">↗</span></a>
+  <a class="module-card" routerLink="/turmas"><span class="module-icon peach">T</span><span><strong>Turmas e alunos</strong><small>Organização escolar</small></span><span class="arrow">↗</span></a>
+  <a class="module-card" routerLink="/avaliacoes"><span class="module-icon blue">A</span><span><strong>Avaliações</strong><small>Pautas e acompanhamento</small></span><span class="arrow">↗</span></a>
+</section>
+
+<section class="status-panel">
+  <div class="status-copy"><span class="status-mark" [class.online]="apiStatus() === 'online'" [class.offline]="apiStatus() === 'offline'"></span><div><strong>Conexão com a API</strong><small>{{ apiStatus() === 'online' ? 'Backend respondendo' : apiStatus() === 'offline' ? 'Não foi possível alcançar o backend' : 'Verificando disponibilidade...' }}</small></div></div>
+  <div class="status-actions"><small>{{ checkedAt() ? 'Verificado às ' + checkedAt() : 'GET /api/v1/health/live' }}</small><button type="button" (click)="checkApi()">Testar novamente</button></div>
+</section>
